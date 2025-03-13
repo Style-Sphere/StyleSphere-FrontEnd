@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/styles/categories.css";
 import "../assets/styles/categories_responsive.css";
+
+import magnifyingGlass from "../assets/images/magnifying-glass.svg";
+import shoppingBag from "../assets/images/shopping-bag.svg";
+import starIcon from "../assets/images/star.svg";
+import avatarIcon from "../assets/images/avatar.svg";
+import categoriesBg from "../assets/images/categories.jpg";
 
 const Categories = () => {
   return (
@@ -27,14 +33,14 @@ const Categories = () => {
               <form action="#">
                 <input type="search" className="search_input" required />
                 <button type="submit" className="search_button">
-                  <img src="/images/magnifying-glass.svg" alt="Search" />
+                  <img src={magnifyingGlass} alt="Search" />
                 </button>
               </form>
             </div>
             <div className="shopping">
               <Link to="#">
                 <div className="cart">
-                  <img src="/images/shopping-bag.svg" alt="Cart" />
+                  <img src={shoppingBag} alt="Cart" />
                   <div className="cart_num_container">
                     <div className="cart_num_inner">
                       <div className="cart_num">1</div>
@@ -44,7 +50,7 @@ const Categories = () => {
               </Link>
               <Link to="#">
                 <div className="star">
-                  <img src="/images/star.svg" alt="Favorites" />
+                  <img src={starIcon} alt="Favorites" />
                   <div className="star_num_container">
                     <div className="star_num_inner">
                       <div className="star_num">0</div>
@@ -54,7 +60,7 @@ const Categories = () => {
               </Link>
               <Link to="#">
                 <div className="avatar">
-                  <img src="/images/avatar.svg" alt="User" />
+                  <img src={avatarIcon} alt="User" />
                 </div>
               </Link>
             </div>
@@ -64,7 +70,10 @@ const Categories = () => {
 
       {/* Home Section */}
       <div className="home">
-        <div className="home_background" style={{ backgroundImage: "url(/images/categories.jpg)" }}></div>
+        <div
+          className="home_background"
+          style={{ backgroundImage: `url(${categoriesBg})` }}
+        ></div>
         <div className="container">
           <div className="row">
             <div className="col">
@@ -109,10 +118,26 @@ const Categories = () => {
                   <div className="sidebar_title">Color</div>
                   <div className="sidebar_section_content">
                     <ul>
-                      <li><Link to="#"><span style={{ background: "#a3ccff" }}></span>Blue (23)</Link></li>
-                      <li><Link to="#"><span style={{ background: "#937c6f" }}></span>Brown (11)</Link></li>
-                      <li><Link to="#"><span style={{ background: "#000000" }}></span>Black (61)</Link></li>
-                      <li><Link to="#"><span style={{ background: "#ff5c00" }}></span>Orange (34)</Link></li>
+                      <li>
+                        <Link to="#">
+                          <span style={{ background: "#a3ccff" }}></span>Blue (23)
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span style={{ background: "#937c6f" }}></span>Brown (11)
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span style={{ background: "#000000" }}></span>Black (61)
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span style={{ background: "#ff5c00" }}></span>Orange (34)
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>

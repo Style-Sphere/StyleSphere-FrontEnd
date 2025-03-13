@@ -1,8 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/styles/cart.css";
 import "../assets/styles/cart_responsive.css";
+
+import magnifyingGlass from "../assets/images/magnifying-glass.svg";
+import shoppingBag from "../assets/images/shopping-bag.svg";
+import starIcon from "../assets/images/star.svg";
+import avatarIcon from "../assets/images/avatar.svg";
+import cartProduct1 from "../assets/images/cart_product_1.jpg";
+import trashIcon from "../assets/images/trash.png";
 
 const Cart = () => {
   return (
@@ -27,14 +34,14 @@ const Cart = () => {
               <form action="#">
                 <input type="search" className="search_input" required />
                 <button type="submit" className="search_button">
-                  <img src="/images/magnifying-glass.svg" alt="Search" />
+                  <img src={magnifyingGlass} alt="Search" />
                 </button>
               </form>
             </div>
             <div className="shopping">
               <Link to="#">
                 <div className="cart">
-                  <img src="/images/shopping-bag.svg" alt="Cart" />
+                  <img src={shoppingBag} alt="Cart" />
                   <div className="cart_num_container">
                     <div className="cart_num_inner">
                       <div className="cart_num">1</div>
@@ -44,7 +51,7 @@ const Cart = () => {
               </Link>
               <Link to="#">
                 <div className="star">
-                  <img src="/images/star.svg" alt="Favorites" />
+                  <img src={starIcon} alt="Favorites" />
                   <div className="star_num_container">
                     <div className="star_num_inner">
                       <div className="star_num">0</div>
@@ -54,7 +61,7 @@ const Cart = () => {
               </Link>
               <Link to="#">
                 <div className="avatar">
-                  <img src="/images/avatar.svg" alt="User" />
+                  <img src={avatarIcon} alt="User" />
                 </div>
               </Link>
             </div>
@@ -92,7 +99,7 @@ const Cart = () => {
                 <ul>
                   <li className="cart_product d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
                     <div className="cart_product_image">
-                      <img src="/images/cart_product_1.jpg" alt="Product" />
+                      <img src={cartProduct1} alt="Product" />
                     </div>
                     <div className="cart_product_name">
                       <Link to="/product">2 Piece Swimsuit</Link>
@@ -106,7 +113,7 @@ const Cart = () => {
                         <div className="cart_product_total">$35.00</div>
                         <div className="cart_product_button">
                           <button className="cart_product_remove">
-                            <img src="/images/trash.png" alt="Remove" />
+                            <img src={trashIcon} alt="Remove" />
                           </button>
                         </div>
                       </div>
